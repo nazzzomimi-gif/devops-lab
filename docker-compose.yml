@@ -1,0 +1,9 @@
+services:
+  webapp:
+    build: .
+    ports:
+      - "8081:5000"
+    depends_on:
+      - redis
+  redis:
+    image: public.ecr.aws/docker/library/redis:alpine
